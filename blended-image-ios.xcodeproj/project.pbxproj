@@ -21,6 +21,8 @@
 		B063A6E3190848B200F20766 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B063A6C5190848B200F20766 /* UIKit.framework */; };
 		B063A6EB190848B200F20766 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B063A6E9190848B200F20766 /* InfoPlist.strings */; };
 		B063A6ED190848B200F20766 /* blended_image_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B063A6EC190848B200F20766 /* blended_image_iosTests.m */; };
+		B063A6F8190848F400F20766 /* HDBlendedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B063A6F7190848F400F20766 /* HDBlendedImage.m */; };
+		B063A6FC1908494B00F20766 /* HDBlendedImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B063A6FB1908494B00F20766 /* HDBlendedImageLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		B063A6E8190848B200F20766 /* blended-image-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "blended-image-iosTests-Info.plist"; sourceTree = "<group>"; };
 		B063A6EA190848B200F20766 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B063A6EC190848B200F20766 /* blended_image_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blended_image_iosTests.m; sourceTree = "<group>"; };
+		B063A6F6190848F400F20766 /* HDBlendedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBlendedImage.h; sourceTree = "<group>"; };
+		B063A6F7190848F400F20766 /* HDBlendedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBlendedImage.m; sourceTree = "<group>"; };
+		B063A6FA1908494B00F20766 /* HDBlendedImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBlendedImageLayer.h; sourceTree = "<group>"; };
+		B063A6FB1908494B00F20766 /* HDBlendedImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBlendedImageLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		B063A6B5190848B200F20766 = {
 			isa = PBXGroup;
 			children = (
+				B063A6F9190848FD00F20766 /* HDBlendedImage */,
 				B063A6C7190848B200F20766 /* blended-image-ios */,
 				B063A6E6190848B200F20766 /* blended-image-iosTests */,
 				B063A6C0190848B200F20766 /* Frameworks */,
@@ -150,6 +157,17 @@
 				B063A6E9190848B200F20766 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B063A6F9190848FD00F20766 /* HDBlendedImage */ = {
+			isa = PBXGroup;
+			children = (
+				B063A6F6190848F400F20766 /* HDBlendedImage.h */,
+				B063A6F7190848F400F20766 /* HDBlendedImage.m */,
+				B063A6FA1908494B00F20766 /* HDBlendedImageLayer.h */,
+				B063A6FB1908494B00F20766 /* HDBlendedImageLayer.m */,
+			);
+			path = HDBlendedImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B063A6F8190848F400F20766 /* HDBlendedImage.m in Sources */,
 				B063A6D8190848B200F20766 /* HDViewController.m in Sources */,
+				B063A6FC1908494B00F20766 /* HDBlendedImageLayer.m in Sources */,
 				B063A6D2190848B200F20766 /* HDAppDelegate.m in Sources */,
 				B063A6CE190848B200F20766 /* main.m in Sources */,
 			);

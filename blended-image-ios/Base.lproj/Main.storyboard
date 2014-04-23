@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="HDViewController" sceneMemberID="viewController">
@@ -15,8 +15,99 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bAN-d9-ijL">
+                                <rect key="frame" x="10" y="64" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="MRD-mb-8Ke"/>
+                                    <constraint firstAttribute="width" constant="300" id="z0t-TB-nAD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pd-om-q4u">
+                                <rect key="frame" x="10" y="372" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="77S-yh-iBZ"/>
+                                    <constraint firstAttribute="height" constant="64" id="Ska-Xk-Ue8"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Red">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DgY-nH-dOU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7p-wb-Y9f">
+                                <rect key="frame" x="82" y="372" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="S4U-en-l2O"/>
+                                    <constraint firstAttribute="width" constant="64" id="na3-tq-L04"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Green">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fho-cr-id6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGd-xm-9Zn">
+                                <rect key="frame" x="154" y="372" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="hNo-0b-SGr"/>
+                                    <constraint firstAttribute="height" constant="64" id="zil-le-ZsF"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Blue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xu9-5k-C8n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEY-jy-HwD">
+                                <rect key="frame" x="226" y="372" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Hy0-th-y0o"/>
+                                    <constraint firstAttribute="height" constant="64" id="xli-zb-eSp"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Black">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Q36-2N-3UU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bAN-d9-ijL" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="64" id="76s-pd-COl"/>
+                            <constraint firstItem="i7p-wb-Y9f" firstAttribute="leading" secondItem="9pd-om-q4u" secondAttribute="trailing" constant="8" id="8GQ-YJ-4jw"/>
+                            <constraint firstItem="gEY-jy-HwD" firstAttribute="top" secondItem="bAN-d9-ijL" secondAttribute="bottom" constant="8" id="8XS-Of-YDx"/>
+                            <constraint firstItem="9pd-om-q4u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="B1M-fN-oF5"/>
+                            <constraint firstItem="gEY-jy-HwD" firstAttribute="leading" secondItem="yGd-xm-9Zn" secondAttribute="trailing" constant="8" id="DjK-gM-MJ4"/>
+                            <constraint firstItem="9pd-om-q4u" firstAttribute="top" secondItem="bAN-d9-ijL" secondAttribute="bottom" constant="8" id="Gp8-Vt-FR2"/>
+                            <constraint firstItem="yGd-xm-9Zn" firstAttribute="top" secondItem="bAN-d9-ijL" secondAttribute="bottom" constant="8" id="IrO-8g-ZGH"/>
+                            <constraint firstItem="yGd-xm-9Zn" firstAttribute="leading" secondItem="i7p-wb-Y9f" secondAttribute="trailing" constant="8" id="Pmf-0s-iWi"/>
+                            <constraint firstItem="i7p-wb-Y9f" firstAttribute="top" secondItem="bAN-d9-ijL" secondAttribute="bottom" constant="8" id="dpy-Pv-IQr"/>
+                            <constraint firstAttribute="trailing" secondItem="bAN-d9-ijL" secondAttribute="trailing" constant="10" id="kmy-hR-FEf"/>
+                            <constraint firstItem="bAN-d9-ijL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="w8E-by-Bc2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="bAN-d9-ijL" id="xq9-Eh-HJV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

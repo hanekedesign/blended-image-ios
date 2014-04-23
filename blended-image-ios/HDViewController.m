@@ -8,22 +8,48 @@
 
 #import "HDViewController.h"
 
-@interface HDViewController ()
+#import "HDBlendedImage.h"
 
+@interface HDViewController ()
+@property (nonatomic, weak) IBOutlet UIImageView* imageView;
 @end
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation HDViewController
-
-- (void)viewDidLoad
+- (IBAction)selectImageAction: (id)sender
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  NSArray* colors = @[[UIColor redColor],
+                      [UIColor greenColor],
+                      [UIColor blueColor],
+                      [UIColor blackColor]];
+  
+  [self drawWithColor: [colors objectAtIndex: [sender tag]]];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)drawWithColor: (UIColor*)color
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  HDBlendedImage* blendedImage = [[HDBlendedImage alloc] init];
+  
+  // Fill layer
+  [blendedImage addLayer: [HDBlendedImageLayer layerWithFillColor: color
+                                                        blendMode: kCGBlendModeNormal]];
+  
+  // Highlights
+  UIImage* highlightImage = [UIImage imageNamed: @"highlights"];
+  HDBlendedImageLayer* highlights = [HDBlendedImageLayer layerWithImage: highlightImage
+                                                              blendMode: kCGBlendModeScreen];
+  highlights.alpha = 1.0;
+  [blendedImage addLayer: highlights];
+  
+  // Shadows
+  UIImage* shadowImage = [UIImage imageNamed: @"shadows"];
+  HDBlendedImageLayer* shadows = [HDBlendedImageLayer layerWithImage: shadowImage
+                                                           blendMode: kCGBlendModeMultiply];
+  shadows.alpha = 1.0;
+  [blendedImage addLayer: shadows];
+  
+  //
+  self.imageView.image = blendedImage.image;
 }
 
 @end
